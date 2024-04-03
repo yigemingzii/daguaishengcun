@@ -1,0 +1,36 @@
+/* THIS FILE WILL BE OVERWRITTEN BY Red Panda C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+A ICON "app.ico"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 0,0,0,3
+PRODUCTVERSION 0,0,0,3
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "1c0904e4"
+    {
+      VALUE "CompanyName", ""
+      VALUE "FileVersion", "a0.0.3"
+      VALUE "FileDescription", "打怪生存测试.240324"
+      VALUE "InternalName", ""
+      VALUE "LegalCopyright", ""
+      VALUE "LegalTrademarks", ""
+      VALUE "OriginalFilename", "a0.0.3"
+      VALUE "ProductName", "打怪生存"
+      VALUE "ProductVersion", "a0.0.3"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x1c09, 1252
+  }
+}

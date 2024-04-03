@@ -1,0 +1,35 @@
+# Project: a0.0.3
+# Makefile created by Red Panda C++ 2.26.2249
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = a0_private.res
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o a0_private.res
+CLEANOBJ  =  main.o  a0_private.res 打怪生存.exe
+LIBS     =  -s -static
+INCS     =  
+CXXINCS  =  
+BIN      = 打怪生存.exe
+CXXFLAGS = $(CXXINCS)  -O3 -std=c++2b -pipe
+CFLAGS   = $(INCS)  -O3 -pipe
+RM       = del /q /f
+WINDRESFLAGS  = 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS) 
+
+a0_private.res: a0_private.rc 
+	$(WINDRES) -i a0_private.rc --input-format=rc -o a0_private.res -O coff $(WINDRESFLAGS) 
+
